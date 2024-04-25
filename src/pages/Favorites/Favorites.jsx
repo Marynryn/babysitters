@@ -1,15 +1,15 @@
-import AdvertItem from "components/AdvertItem/AdvertItem";
-import Modal from "components/Modal/Modal";
+// import AdvertItem from "components/AdvertItem/AdvertItem";
+// import Modal from "components/Modal/Modal";
 
-import { useSelector } from 'react-redux';
-import { selectFavorites } from "store/selectors";
+// import { useSelector } from 'react-redux';
+// import { selectFavorites } from "store/selectors";
 
 const Favorites = () => {
-    const favoriteAdverts = useSelector(selectFavorites);
+    // const favoriteAdverts = useSelector(selectFavorites);
 
     return (
         <div>
-            <h2>Favorite Adverts</h2>
+            {/* <h2>Favorite Adverts</h2>
             <ul>
                 {favoriteAdverts.map((item) => (
                     <li key={item._id}>
@@ -17,7 +17,7 @@ const Favorites = () => {
                     </li>
                 ))}
             </ul>
-            <Modal />
+            <Modal /> */}
         </div>
     );
 }
