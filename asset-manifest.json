@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/babysitters/static/css/main.f6f730e3.css",
+    "main.js": "/babysitters/static/js/main.6b72c8cb.js",
+    "static/js/544.89d3a754.chunk.js": "/babysitters/static/js/544.89d3a754.chunk.js",
+    "static/css/635.d494440c.chunk.css": "/babysitters/static/css/635.d494440c.chunk.css",
+    "static/js/635.bdc5f0e9.chunk.js": "/babysitters/static/js/635.bdc5f0e9.chunk.js",
+    "static/js/733.fdb8d457.chunk.js": "/babysitters/static/js/733.fdb8d457.chunk.js",
+    "index.html": "/babysitters/index.html",
+    "main.f6f730e3.css.map": "/babysitters/static/css/main.f6f730e3.css.map",
+    "main.6b72c8cb.js.map": "/babysitters/static/js/main.6b72c8cb.js.map",
+    "544.89d3a754.chunk.js.map": "/babysitters/static/js/544.89d3a754.chunk.js.map",
+    "635.d494440c.chunk.css.map": "/babysitters/static/css/635.d494440c.chunk.css.map",
+    "635.bdc5f0e9.chunk.js.map": "/babysitters/static/js/635.bdc5f0e9.chunk.js.map",
+    "733.fdb8d457.chunk.js.map": "/babysitters/static/js/733.fdb8d457.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6f730e3.css",
+    "static/js/main.6b72c8cb.js"
+  ]
+}
