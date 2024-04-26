@@ -1,24 +1,37 @@
-import * as yup from 'yup';
+import * as yup from "yup";
 
-export const Schema = yup.object({
+export const authSchema = yup.object({
   name: yup
     .string()
     .trim()
-    .min(2, 'Name must be at least 2 characters')
-    .max(32, 'Name must be no more than 32 characters')
+    .min(2, "Name must be at least 2 characters")
+    .max(32, "Name must be no more than 32 characters")
     .matches(
       /^[a-zA-Z0-9\s]*$/,
-      'Name can only contain letters, numbers, and spaces'
-    )
-    .required('Name is required'),
+      "Name can only contain letters, numbers, and spaces"
+    ),
   email: yup
     .string()
     .trim()
-    .email('Invalid email format')
-    .required('Email is required'),
-  bookingDate: yup
-    .date()
-    .nullable()
-    .required('Booking date is required')
-    .min(new Date(), 'Booking date must be in the future'),
+    .email()
+    .required("Email is required")
+    .matches(
+      /^[a-zA-Z0-9.-_]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/,
+      "Invalid email format"
+    ),
+  password: yup
+    .string()
+    .trim()
+    .required("Password is required")
+    .matches(
+      /^(?=.*[a-zA-Z0-9])[a-zA-Z0-9!@#$%^&*()-_=+[\]{}|;:',.<>?/~`]+$/,
+      "Invalid password format"
+    )
+    .min(8, "Password must be at least 8 characters")
+    .max(64, "Password must be no more than 64 characters")
+    .test(
+      "no-spaces",
+      "Password cannot contain spaces",
+      (value) => !/\s/.test(value)
+    ),
 });

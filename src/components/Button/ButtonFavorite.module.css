@@ -1,0 +1,14 @@
+.heart {
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-color: #fff;
+}
+.favorite_on {
+  fill: var(--color-3);
+}
+.favorite_off {
+  stroke: black;
+  fill: #fff;
+}
