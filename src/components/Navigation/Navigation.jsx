@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import css from "./Navigation.module.css"
 import Nannies from './../../pages/Nannies/Nannies';
+import { IsLoggedIn } from 'helpers/isLoggedIn';
 
 
 export const Navigation = () => {
@@ -15,9 +16,9 @@ export const Navigation = () => {
             <NavLink className={css.link} to="/nannies">
                 Nannies
             </NavLink>
-            {/* <NavLink className={css.link} to="/favorites">
+            {IsLoggedIn() && (<NavLink className={css.link} to="/favorites">
                 Favorites
-            </NavLink> */}
+            </NavLink>)}
         </nav>
     );
 };

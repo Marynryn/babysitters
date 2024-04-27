@@ -24,23 +24,6 @@ link {
   list-style: none;
 }
 :root {
-  --color-1: #101828;
-  --color-2: #475467;
-  --color-3: #e44848;
-  --color-4: #ffc531;
-  --color-5: #f2f4f7;
-  --color-6: #f7f7f7;
-}
-button {
-  border-radius: 200px;
-  text-align: center;
-  width: 173px;
-  height: 56px;
-  background: var(--color-3);
-  border: none;
-  color: var(--color-5);
-  margin-top: 20px;
-  cursor: pointer;
 }
 
 ul {
