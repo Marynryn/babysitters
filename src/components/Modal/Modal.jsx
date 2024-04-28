@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-
+import sprite from "svg/symbol-defs.svg";
 import css from './Modal.module.css';
-
-
-
 import ReactDOM from 'react-dom';
-import Button from 'components/Button/Button';
+
 
 const Modal = ({ isOpen, onClose, children }) => {
 
@@ -38,7 +35,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             <div className={css.modal_content}>
                 <button type='button' onClick={handleCloseModal}>
                     <svg className="" >
-                        <use href="/public/svg/symbol-defs.svg#icon-x" width={32} height={32} />
+                        <use href={`${sprite}#icon-x`} width={32} height={32} />
                     </svg>
                 </button>
                 {children}

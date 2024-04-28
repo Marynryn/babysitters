@@ -17,12 +17,8 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/nannies" element={<Nannies />} />
-        <Route
-          path="/favorites"
-          element={
-            <PrivateRoute redirectTo="/" component={<Favorites />} />
-          }
-        />
+        <Route path="/favorites" element={<PrivateRoute redirectTo="/" component={Favorites} />} />
+
 
 
         <Route path="*" element={<Navigate to="/" />} />

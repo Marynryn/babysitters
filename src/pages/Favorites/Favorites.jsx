@@ -1,23 +1,24 @@
-// import AdvertItem from "components/AdvertItem/AdvertItem";
-// import Modal from "components/Modal/Modal";
 
-// import { useSelector } from 'react-redux';
-// import { selectFavorites } from "store/selectors";
+import CardItem from "components/CardItem/CardItem";
+
+
+import { useSelector } from 'react-redux';
+import { selectFavorites } from "store/selectors";
 
 const Favorites = () => {
-    // const favoriteAdverts = useSelector(selectFavorites);
-
+    const favoriteCards = useSelector(selectFavorites);
+    console.log(favoriteCards);
     return (
         <div>
-            {/* <h2>Favorite Adverts</h2>
+            <h2>Favorite Adverts</h2>
             <ul>
-                {favoriteAdverts.map((item) => (
-                    <li key={item._id}>
-                        <AdvertItem props={item} />
+                {favoriteCards.map((item) => (
+                    <li key={item.name}>
+                        <CardItem props={item} />
                     </li>
                 ))}
             </ul>
-            <Modal /> */}
+
         </div>
     );
 }

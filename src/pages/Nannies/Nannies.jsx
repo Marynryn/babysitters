@@ -2,6 +2,7 @@
 // import Filters from "components/Filters/Filters"
 import Header from "components/Header.jsx/Header";
 import css from "./Catalog.module.css"
+import CardsList from "components/CardsList/CardsList";
 // import Modal from "components/Modal/Modal"
 
 const Nannies = () => {
@@ -9,9 +10,9 @@ const Nannies = () => {
     return (
         <div className="">
             <Header />
-            {/* <Filters />
-            <CardsList/> */}
-            
+            {/* <Filters /> */}
+            <CardsList />
+
         </div>
     )
 }

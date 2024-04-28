@@ -1,0 +1,17 @@
+.adverts_list {
+  width: 888px;
+  margin-left: 60px;
+  align-items: center;
+}
+.load_more {
+  margin-bottom: 30px;
+  margin-left: 330px;
+  border: 1px solid;
+  border-color: var(--color-5);
+  background-color: #fff;
+  color: var(--color-1);
+}
+.load_more:focus,
+.load_more:hover {
+  border-color: var(--color-3);
+}
