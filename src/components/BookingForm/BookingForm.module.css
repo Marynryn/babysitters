@@ -1,0 +1,118 @@
+.form {
+  width: 400px;
+  padding: 24px;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: var(--color-6);
+}
+.form_title {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.form_description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  margin-top: 10px;
+}
+.label_form input,
+.data input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: left;
+  width: 367px;
+  padding: 18px 18px 18px 18px;
+  border: var(--color-6);
+  background: #f7f7f7;
+}
+textarea {
+  background: #f7f7f7;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 364px;
+  height: 90px;
+  padding: 18px 18px 18px 18px;
+}
+.icon_data {
+  stroke: black;
+  fill: var(--color-6);
+}
+.calendar {
+  background-color: transparent;
+  margin-top: 4px;
+}
+.react-datepicker-wrapper {
+  border: none;
+  position: relative;
+}
+
+.calendar_color {
+  color: var(--accent-color);
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.calendar_div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--color-6);
+  width: 403px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.react-datepicker-popper {
+  position: absolute;
+  right: 50px;
+}
+.calendar_div input {
+  padding: 18px;
+  width: 300px;
+  padding-left: 0;
+  text-align: left;
+}
+.send:hover {
+  background-color: #d84343;
+}
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+textarea::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+/* BookingForm.module.css */
+
+/* Добавляем стили для react-time-picker */
+.react-time-picker {
+  width: 100%; /* Задаем ширину */
+  border: 1px solid #ccc; /* Устанавливаем границу */
+  border-radius: 4px; /* Добавляем скругление углов */
+  padding: 8px; /* Добавляем внутренний отступ */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+  box-sizing: border-box; /* Устанавливаем box-sizing для корректного расчета размеров */
+}
+
+/* Скрываем кнопку очистки */
+.react-time-picker__button {
+  display: none;
+}
+.react-time-picker__wrapper {
+  width: 100px;
+}
+/* Стили для стрелок */
+.react-time-picker__button:enabled:hover svg,
+.react-time-picker__button:enabled:focus svg {
+  fill: #007bff; /* Цвет при наведении или фокусе */
+}
+
+/* Стили для активной стрелки */
+.react-time-picker__button:enabled:active svg {
+  fill: #0056b3; /* Цвет при активации */
+}

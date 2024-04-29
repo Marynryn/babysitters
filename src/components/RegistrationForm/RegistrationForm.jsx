@@ -47,14 +47,14 @@ const RegistrationForm = ({ type, onClose }) => {
                 </p>
                 <div className="flex gap-6">
                     <ul>
-                        {type === 'register' && (<li key="name"><InputField type="text" name="name" placeholder="Name" /> <ErrorMessage name="name" component="div" className="error-message" /></li>
-                        )}
-                        <li key="email">
-                            <InputField type="email" name="email" placeholder="Email" />
-                            <ErrorMessage name="email" component="div" className="error-message" /></li>
-                        <li key="password">
-                            <InputField type="password" name="password" placeholder="Password" />
-                            <ErrorMessage name="password" component="div" className="error-message" /></li>
+                        {type === 'register' && (<><InputField type="text" name="name" placeholder="Name" /> <ErrorMessage name="name" component="div" className="error-message" />
+                        </>)}
+
+                        <InputField type="email" name="email" placeholder="Email" />
+                        <ErrorMessage name="email" component="div" className="error-message" />
+
+                        <InputField type="password" name="password" placeholder="Password" />
+                        <ErrorMessage name="password" component="div" className="error-message" />
                     </ul>
                 </div>
                 <Button type="submit" >

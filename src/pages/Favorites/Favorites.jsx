@@ -1,5 +1,6 @@
 
 import CardItem from "components/CardItem/CardItem";
+import Header from "components/Header.jsx/Header";
 
 
 import { useSelector } from 'react-redux';
@@ -7,10 +8,11 @@ import { selectFavorites } from "store/selectors";
 
 const Favorites = () => {
     const favoriteCards = useSelector(selectFavorites);
-    console.log(favoriteCards);
+
     return (
         <div>
-            <h2>Favorite Adverts</h2>
+            <Header />
+            {/* <Filters/> */}
             <ul>
                 {favoriteCards.map((item) => (
                     <li key={item.name}>

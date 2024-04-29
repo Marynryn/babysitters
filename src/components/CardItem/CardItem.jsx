@@ -3,10 +3,18 @@ import Button from 'components/Button/Button';
 import Location from 'components/Location/Location';
 import Price from 'components/Price/Price';
 import Rating from 'components/Rating/Rating';
+import Reviews from 'components/Reviews/Reviews';
 import calculateAge from 'helpers/calculateAge';
-import React from 'react'
+import React, { useState } from 'react'
 
 const CardItem = ({ props }) => {
+
+    const [expanded, setExpanded] = useState(false);
+
+    const handleToggleExpand = () => {
+        setExpanded(!expanded);
+    };
+
     const age = calculateAge(props.birthday);
     return (
         <div className="">
@@ -40,9 +48,14 @@ const CardItem = ({ props }) => {
                     </ul>
                 </div>
                 <p className="">{props.about}</p>
+                {!expanded && (
 
-
-                <Button className="" type={"button"} >Read more</Button>
+                    <Button className="" type={"button"} onClick={handleToggleExpand}>Read more</Button>)}
+                {expanded && (
+                    <div className="card-content">
+                        <Reviews user={props} />
+                    </div>
+                )}
             </div>
 
         </div>)
