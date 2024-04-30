@@ -87,32 +87,3 @@ textarea::placeholder {
   font-style: normal;
   font-weight: 400;
 }
-/* BookingForm.module.css */
-
-/* Добавляем стили для react-time-picker */
-.react-time-picker {
-  width: 100%; /* Задаем ширину */
-  border: 1px solid #ccc; /* Устанавливаем границу */
-  border-radius: 4px; /* Добавляем скругление углов */
-  padding: 8px; /* Добавляем внутренний отступ */
-  font-size: 16px; /* Устанавливаем размер шрифта */
-  box-sizing: border-box; /* Устанавливаем box-sizing для корректного расчета размеров */
-}
-
-/* Скрываем кнопку очистки */
-.react-time-picker__button {
-  display: none;
-}
-.react-time-picker__wrapper {
-  width: 100px;
-}
-/* Стили для стрелок */
-.react-time-picker__button:enabled:hover svg,
-.react-time-picker__button:enabled:focus svg {
-  fill: #007bff; /* Цвет при наведении или фокусе */
-}
-
-/* Стили для активной стрелки */
-.react-time-picker__button:enabled:active svg {
-  fill: #0056b3; /* Цвет при активации */
-}

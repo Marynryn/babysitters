@@ -13,7 +13,7 @@ const CardsList = () => {
     const visibleCards = useSelector(selectVisibleCards);
     console.log(visibleCards)
     const [displayedCards, setDisplayedCards] = useState([]);
-    const cardsPerPage = 4;
+    const cardsPerPage = 3;
     useEffect(() => {
         const fetchAndDispatchData = async () => {
             const cards = await fetchData();

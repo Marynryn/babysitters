@@ -3,43 +3,32 @@ import { createSlice } from "@reduxjs/toolkit";
 const mySlice = createSlice({
   name: "cards",
   initialState: {
-    cards: {
-      items: [],
-      isLoading: false,
-      error: null,
-      favorites: [],
-    },
-    filter: {
-      location: "",
-      equipment: [],
-      type: "",
-    },
+    items: [],
+    isLoading: false,
+    error: null,
+    favorites: [],
+    filter: "AtoZ",
   },
+
   reducers: {
     setFilter: (state, action) => {
-      const { location, equipment, type } = action.payload;
-      if (location !== undefined) {
-        state.filter.location = location;
-      }
-      if (equipment !== undefined) {
-        state.filter.equipment = equipment;
-      }
-      if (type !== undefined) {
-        state.filter.type = type;
-      }
+      state.filter = action.payload;
+    },
+    deselectFilter: (state) => {
+      state.filter = "";
     },
     addToFavorites: (state, { payload }) => {
-      state.cards.favorites.push(payload);
+      state.favorites.push(payload);
     },
     removeFromFavorites: (state, { payload }) => {
-      state.cards.favorites = state.cards.favorites.filter(
-        (favorites) => favorites.name !== payload
+      state.favorites = state.favorites.filter(
+        (favorite) => favorite.name !== payload
       );
     },
     fetchCards: (state, action) => {
-      state.cards.isLoading = false;
+      state.isLoading = false;
       state.error = null;
-      state.cards.items = action.payload;
+      state.items = action.payload;
     },
   },
 
@@ -61,5 +50,10 @@ const mySlice = createSlice({
 });
 
 export const cardsReducer = mySlice.reducer;
-export const { setFilter, addToFavorites, removeFromFavorites, fetchCards } =
-  mySlice.actions;
+export const {
+  setFilter,
+  deselectFilter,
+  addToFavorites,
+  removeFromFavorites,
+  fetchCards,
+} = mySlice.actions;

@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase, ref, get } from "firebase/database";
-const API_KEY = "AIzaSyD489JVZTN88t0iLOihy1HLmkaJ_Ps3FLY";
+
+// const API_KEY = "AIzaSyD489JVZTN88t0iLOihy1HLmkaJ_Ps3FLY";
 
 // console.log(API_KEY);
 const firebaseConfig = {

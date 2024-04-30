@@ -1,23 +1,16 @@
+import React from 'react';
+import { useFormContext } from 'react-hook-form';
 
-import React from "react";
-import { Field } from "formik";
+const InputField = ({ name, placeholder }) => {
+    const { register, formState: { errors } } = useFormContext();
 
-
-
-const InputField = (props) => {
     return (
-        <div className="flex flex-col gap-2">
-            {props.label && (
-                <label htmlFor={props.name} className="mb-2 text-base color-gray-900" />
-
-            )}
-            <Field
-                name={props.name}
-                id={props.name}
-                placeholder={props.placeholder}
-                className="p-3 h-11 text-sm rounded border border-gray-300 shadow"
-            />
+        <div>
+            <input type="text" {...register(name)} placeholder={placeholder} />
+            {errors[name] && <span className="error-message">{errors[name].message}</span>}
         </div>
     );
-}
+};
+
 export default InputField;
+

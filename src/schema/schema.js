@@ -35,3 +35,19 @@ export const authSchema = yup.object({
       (value) => !/\s/.test(value)
     ),
 });
+export const schema = yup.object().shape({
+  address: yup.string().required(),
+  phone: yup
+    .string()
+    .matches(/^[0-9]{5,15}$/, "Phone number must be between 5 and 15 digits")
+    .required(),
+  age: yup
+    .number()
+    .min(1, "Age must be at least 1")
+    .max(18, "Age must be less than 100")
+    .required(),
+  email: yup.string().email().required(),
+  name: yup.string().required(),
+  comment: yup.string(),
+  meetingTime: yup.string().required(),
+});

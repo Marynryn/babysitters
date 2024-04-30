@@ -1,6 +1,6 @@
 import Button from "components/Button/Button";
 import Header from "components/Header.jsx/Header";
-import { useState } from "react";
+
 import sprite from "svg/symbol-defs.svg";
 import { NavLink } from 'react-router-dom';
 

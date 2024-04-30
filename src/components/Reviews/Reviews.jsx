@@ -24,7 +24,7 @@ const Reviews = ({ user }) => {
                 ))}</ul>
             <Button type={"button"} onClick={openModal}>Make an appointment</Button>
             <Modal isOpen={modalOpen} onClose={setModalOpen} >
-                <BookingForm props={user} />
+                <BookingForm props={user} onClose={setModalOpen} />
             </Modal>
         </div>
     );

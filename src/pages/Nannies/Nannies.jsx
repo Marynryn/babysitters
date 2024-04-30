@@ -1,16 +1,16 @@
-// import AdvertsList from "components/AdvertsList/AdvertsList"
-// import Filters from "components/Filters/Filters"
+
 import Header from "components/Header.jsx/Header";
-import css from "./Catalog.module.css"
+
 import CardsList from "components/CardsList/CardsList";
-// import Modal from "components/Modal/Modal"
+import Filters from "components/Filters/Filters";
+
 
 const Nannies = () => {
 
     return (
         <div className="">
             <Header />
-            {/* <Filters /> */}
+            <Filters />
             <CardsList />
 
         </div>

@@ -1,6 +1,6 @@
 import { IsLoggedIn } from 'helpers/isLoggedIn';
 import React from 'react'
-import { Navigate, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 
 const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
