@@ -49,5 +49,5 @@ export const schema = yup.object().shape({
   email: yup.string().email().required(),
   name: yup.string().required(),
   comment: yup.string(),
-  meetingTime: yup.string().required(),
+  meetingTime: yup.object().required(),
 });

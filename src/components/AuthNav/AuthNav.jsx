@@ -14,17 +14,17 @@ export const AuthNav = () => {
     };
 
     return (
-        <div><ul className='flex'>
+        <div><ul className='flex justify-between'>
             <li key='login'>
 
                 <Button type={'button'} onClick={() => toggleModal('login')}>
-                    Log In
+                    <span className=' flex px-6 py-2 text-base'>Log In</span>
                 </Button>
             </li >
             <li key='register'>
 
                 <Button type={"button"} onClick={() => toggleModal('register')}>
-                    Registration
+                    <span className=' flex px-6 py-2 text-base'>Registration</span>
                 </Button>
 
             </li>

@@ -6,7 +6,7 @@ export const AppBar = () => {
 
     return (
         <>
-            <header className={css.header}>
+            <header className="">
                 <Navigation />
 
             </header>

@@ -15,7 +15,7 @@ export const generateTimeOptions = () => {
   for (let i = startTime; i <= endTime; i += step) {
     const hour = Math.floor(i / 60); // Получаем часы
     const minute = i % 60; // Получаем минуты
-    const timeString = `${hour.toString().padStart(2, "0")}  :  ${minute
+    const timeString = `${hour.toString().padStart(2, "0")}:${minute
       .toString()
       .padStart(2, "0")}`; // Преобразуем в строку времени в формате "час:минута"
     options.push({ value: timeString, label: timeString });

@@ -27,13 +27,13 @@ export const UserMenu = () => {
     }
     return (
         <div className='flex'>
-            <div>
+            <div className='w-10 h-10 bg-white rounded-xl flex items-center justify-center '>
                 <svg className='' width={16} height={16}>
                     <use href={`${sprite}#icon-avatar`} />
                 </svg>
             </div>
-            <p className=""> {user.displayName}</p>
-            <Button type={'button'} onClick={handleLogout}>Log Out</Button>
+            <p className="ml-4 flex items-center mr-auto">{user.displayName}</p>
+            <Button type={'button'} onClick={handleLogout}><span className='px-5 py-1 text-base'>Log Out</span></Button>
         </div>
     )
 }

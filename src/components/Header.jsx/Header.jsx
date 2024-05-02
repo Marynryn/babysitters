@@ -24,9 +24,11 @@ export const Header = () => {
 
 
     return (
-        <div className='flex'>
-            <p>Nanny.Services</p>
-            <AppBar />
+        <div className=''>
+            <div className=''>
+                <p className='font-medium text-medium mb-4'>Nanny.Services</p>
+                <AppBar />
+            </div>
             {isLog ? <UserMenu /> : <AuthNav />}
 
 

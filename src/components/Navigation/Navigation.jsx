@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import css from "./Navigation.module.css"
+
 
 import { IsLoggedIn } from 'helpers/isLoggedIn';
 
@@ -8,15 +8,15 @@ export const Navigation = () => {
 
 
     return (
-        <nav>
-            <NavLink className={css.link} to="/">
+        <nav className='mb-4 text-center'>
+            <NavLink className="font-normal text-base mr-10" to="/">
                 Home
             </NavLink>
 
-            <NavLink className={css.link} to="/nannies">
+            <NavLink className="font-normal text-base mr-10" to="/nannies">
                 Nannies
             </NavLink>
-            {IsLoggedIn() && (<NavLink className={css.link} to="/favorites">
+            {IsLoggedIn() && (<NavLink className="font-normal text-base" to="/favorites">
                 Favorites
             </NavLink>)}
         </nav>

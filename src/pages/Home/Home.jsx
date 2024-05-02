@@ -9,16 +9,17 @@ export default function Home() {
 
 
     return (
-        <div className="">
+        <div className="m-4 bg-teal-900 bg-cover bg-center text-white h-screen rounded-3xl pb-12 pt-5 px-4" style={{ backgroundImage: 'url("")', backgroundPosition: 'center bottom' }} >
+
             <Header />
-            <h1>Make Life Easier for the Family:</h1>
-            <p>Find Babysitters Online for All Occasions</p>
+            <h1 className="font-medium text-4xl mt-10 md:text-5xl lg:text-6xl xl:text-7xl">Make Life Easier for the Family:</h1>
+            <p className="text-2xl font-normal mt-7 mb-16">Find Babysitters Online for All Occasions</p>
             <NavLink to="/nannies" >
-                <Button>Get started
-                    <svg className="" width={16} height={16}>
+                <Button ><span className="flex items-center px-8 py-4">Get started
+                    <svg className="ml-4 fill-white " width={16} height={16}>
                         <use href={`${sprite}#icon-arrow-up-right2`} />
 
-                    </svg>
+                    </svg></span>
                 </Button>
             </NavLink>
             <div></div>
