@@ -25,8 +25,8 @@ export const Header = () => {
 
     return (
         <div className=''>
-            <div className=''>
-                <p className='font-medium text-medium mb-4'>Nanny.Services</p>
+            <div className=' md: flex flex-wrap'>
+                <p className='font-medium text-medium mb-4 md: mr-12'>Nanny.Services</p>
                 <AppBar />
             </div>
             {isLog ? <UserMenu /> : <AuthNav />}

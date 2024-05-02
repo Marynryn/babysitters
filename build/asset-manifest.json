@@ -1,21 +1,33 @@
 {
   "files": {
-    "main.css": "/babysitters/static/css/main.89e5681c.css",
-    "main.js": "/babysitters/static/js/main.48aa6a85.js",
-    "static/js/544.a167e8d4.chunk.js": "/babysitters/static/js/544.a167e8d4.chunk.js",
-    "static/css/339.40b1adbd.chunk.css": "/babysitters/static/css/339.40b1adbd.chunk.css",
-    "static/js/339.d9730370.chunk.js": "/babysitters/static/js/339.d9730370.chunk.js",
-    "static/js/733.d760ee6b.chunk.js": "/babysitters/static/js/733.d760ee6b.chunk.js",
+    "main.css": "/babysitters/static/css/main.89022843.css",
+    "main.js": "/babysitters/static/js/main.65136213.js",
+    "static/js/544.d82e6a5f.chunk.js": "/babysitters/static/js/544.d82e6a5f.chunk.js",
+    "static/css/265.9cf60fbd.chunk.css": "/babysitters/static/css/265.9cf60fbd.chunk.css",
+    "static/js/265.0d8ff9b8.chunk.js": "/babysitters/static/js/265.0d8ff9b8.chunk.js",
+    "static/css/733.95000eed.chunk.css": "/babysitters/static/css/733.95000eed.chunk.css",
+    "static/js/733.7f9ce947.chunk.js": "/babysitters/static/js/733.7f9ce947.chunk.js",
+    "static/js/143.2771db19.chunk.js": "/babysitters/static/js/143.2771db19.chunk.js",
+    "static/js/781.12e76a24.chunk.js": "/babysitters/static/js/781.12e76a24.chunk.js",
+    "static/js/944.50e55309.chunk.js": "/babysitters/static/js/944.50e55309.chunk.js",
+    "static/media/HelveticaNeueBold.otf": "/babysitters/static/media/HelveticaNeueBold.1baa6c20d3e22be14c0a.otf",
+    "static/media/HelveticaNeueRegular.otf": "/babysitters/static/media/HelveticaNeueRegular.a7c3c98319c1341d5aa5.otf",
+    "static/media/HelveticaNeueMedium.otf": "/babysitters/static/media/HelveticaNeueMedium.38884ffafe8888205009.otf",
+    "static/media/symbol-defs.svg": "/babysitters/static/media/symbol-defs.dd734f8522e9fa2d0251ed78f1d9c8d8.svg",
     "index.html": "/babysitters/index.html",
-    "main.89e5681c.css.map": "/babysitters/static/css/main.89e5681c.css.map",
-    "main.48aa6a85.js.map": "/babysitters/static/js/main.48aa6a85.js.map",
-    "544.a167e8d4.chunk.js.map": "/babysitters/static/js/544.a167e8d4.chunk.js.map",
-    "339.40b1adbd.chunk.css.map": "/babysitters/static/css/339.40b1adbd.chunk.css.map",
-    "339.d9730370.chunk.js.map": "/babysitters/static/js/339.d9730370.chunk.js.map",
-    "733.d760ee6b.chunk.js.map": "/babysitters/static/js/733.d760ee6b.chunk.js.map"
+    "main.89022843.css.map": "/babysitters/static/css/main.89022843.css.map",
+    "main.65136213.js.map": "/babysitters/static/js/main.65136213.js.map",
+    "544.d82e6a5f.chunk.js.map": "/babysitters/static/js/544.d82e6a5f.chunk.js.map",
+    "265.9cf60fbd.chunk.css.map": "/babysitters/static/css/265.9cf60fbd.chunk.css.map",
+    "265.0d8ff9b8.chunk.js.map": "/babysitters/static/js/265.0d8ff9b8.chunk.js.map",
+    "733.95000eed.chunk.css.map": "/babysitters/static/css/733.95000eed.chunk.css.map",
+    "733.7f9ce947.chunk.js.map": "/babysitters/static/js/733.7f9ce947.chunk.js.map",
+    "143.2771db19.chunk.js.map": "/babysitters/static/js/143.2771db19.chunk.js.map",
+    "781.12e76a24.chunk.js.map": "/babysitters/static/js/781.12e76a24.chunk.js.map",
+    "944.50e55309.chunk.js.map": "/babysitters/static/js/944.50e55309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89e5681c.css",
-    "static/js/main.48aa6a85.js"
+    "static/css/main.89022843.css",
+    "static/js/main.65136213.js"
   ]
 }
