@@ -9,7 +9,7 @@ export default function Home() {
 
 
     return (
-        <div className=" m-4 bg-teal-900 bg-cover bg-center text-white  rounded-3xl  " style={{ backgroundImage: 'url(/img/bg1.png)' }}>
+        <div className=" m-4 bg-teal-900 bg-cover bg-center text-white h-screen rounded-3xl  " style={{ backgroundImage: 'url(/img/bg1.png)' }}>
             <div className={css.bg}>
                 <div className="pb-12 pt-5  px-4">
                     <Header />
