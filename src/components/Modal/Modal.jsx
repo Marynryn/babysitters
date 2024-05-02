@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import sprite from "svg/symbol-defs.svg";
 
 import ReactDOM from 'react-dom';
@@ -7,9 +7,9 @@ import ReactDOM from 'react-dom';
 const Modal = ({ isOpen, onClose, children }) => {
 
 
-    const handleCloseModal = () => {
+    const handleCloseModal = useCallback(() => {
         onClose(false);
-    }
+    }, [onClose]);
 
     const handleBackdropClick = event => {
         if (event.currentTarget === event.target) {

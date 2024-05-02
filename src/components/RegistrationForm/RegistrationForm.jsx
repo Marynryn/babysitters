@@ -1,12 +1,12 @@
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
-import Button from 'components/Button/Button';
+
 import InputField from 'components/InputField/InputField';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from 'firebase.js';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { authSchema } from 'schema/schema';
-import sprite from "svg/symbol-defs.svg";
+// import sprite from "svg/symbol-defs.svg";
 const RegistrationForm = ({ type, onClose }) => {
     const methods = useForm({
         resolver: yupResolver(authSchema)
