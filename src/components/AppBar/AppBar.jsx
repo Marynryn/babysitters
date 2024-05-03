@@ -6,7 +6,7 @@ export const AppBar = () => {
 
     return (
         <>
-            <header className="">
+            <header className="flex items-center">
                 <Navigation />
 
             </header>

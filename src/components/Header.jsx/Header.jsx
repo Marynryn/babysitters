@@ -24,15 +24,15 @@ export const Header = () => {
 
 
     return (
-        <div className=''>
-            <div className=' md: flex flex-wrap'>
-                <p className='font-medium text-medium mb-4 md: mr-12'>Nanny.Services</p>
+
+        <div className=' flex flex-wrap justify-between items-center'>
+            <p className='font-base text-medium flex items-center '>Nanny.Services</p>
+            <div className='flex flex-wrap '>
                 <AppBar />
+                {isLog ? <UserMenu /> : <AuthNav />}
             </div>
-            {isLog ? <UserMenu /> : <AuthNav />}
+        </div>
 
-
-        </div >
     )
 }
 export default Header;
