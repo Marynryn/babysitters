@@ -25,11 +25,12 @@ export const Header = () => {
 
     return (
 
-        <div className=' flex flex-wrap justify-between items-center'>
-            <p className='font-base text-medium flex items-center '>Nanny.Services</p>
-            <div className='flex flex-wrap '>
+        <div className=' m:flex m:flex-wrap  m:justify-between items-center gap-4'>
+            <p className='font-base text-medium flex items-start mb-4'>Nanny.Services</p>
+            <div className='m:flex m:flex-wrap  m:justify-between gap-4'>
                 <AppBar />
                 {isLog ? <UserMenu /> : <AuthNav />}
+
             </div>
         </div>
 

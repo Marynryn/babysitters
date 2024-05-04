@@ -14,7 +14,7 @@ export const AuthNav = () => {
     };
 
     return (
-        <div><ul className='flex justify-between'>
+        <div><ul className='flex items-center justify-center lg:justify-between '>
             <li key='login' className='mr-4'>
 
                 <button className="border  border-stone-200 rounded-full " type='button' onClick={() => toggleModal('login')}>

@@ -8,7 +8,7 @@ import Loader from './Loader/Loader';
 
 export const Layout = () => {
     return (
-        <div className='h-screen w-full ' >
+        <div className=' w-full ' >
 
             <Suspense fallback={<Loader />}>
                 <Outlet />

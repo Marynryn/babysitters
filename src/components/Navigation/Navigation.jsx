@@ -8,7 +8,7 @@ export const Navigation = () => {
 
 
     return (
-        <nav className=' text-center xl:mr-24'>
+        <nav className='h-10 text-center flex justify-center mb-4 items-center xl:mr-24'>
             <NavLink className="font-normal text-base mr-8 xl:mr-10 " to="/">
                 Home
             </NavLink>
