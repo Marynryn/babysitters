@@ -9,7 +9,9 @@ const Nannies = () => {
 
     return (
         <div className="">
-            <Header />
+            <div className=" bg-teal-900 ">
+                <Header />
+            </div>
             <Filters />
             <CardsList />
 
