@@ -38,7 +38,7 @@ const RegistrationForm = ({ type, onClose }) => {
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)} className="block gap-10">
                 <p className="mb-5 text-4xl font-medium">{`${type === 'register' ? 'Registration' : 'Log In'}`}</p>
-                <p className="mb-10 text-s font-base">{`${type === 'register' ? 'Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information.' : 'Welcome back! Please enter your credentials to access your account and continue your babysitter search.'}`}</p>
+                <p className="mb-10 text-s font-base" style={{ color: "rgba(17, 16, 28, 0.50)" }}>{`${type === 'register' ? 'Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information.' : 'Welcome back! Please enter your credentials to access your account and continue your babysitter search.'}`}   </p>
                 <div className="w-full">
                     {type === 'register' && (
                         <>
@@ -55,7 +55,7 @@ const RegistrationForm = ({ type, onClose }) => {
                     {errors.password && <span className="error-message">{errors.password.message}</span>}
                 </div>
                 <div>
-                    <button className=' bg-teal-900  border  border-stone-200 rounded-full w-full py-2 text-center mt-8' type="submit" ><span className='text-white'>{`${type === 'login' ? 'Log In' : 'Sign Up'}`}</span></button>
+                    <button className=' bg-teal-900  border  border-stone-200 rounded-full w-full py-3 text-center mt-8' type="submit" ><span className='text-white'>{`${type === 'login' ? 'Log In' : 'Sign Up'}`}</span></button>
                 </div>
             </form>
         </FormProvider>
