@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { selectVisibleCards } from "store/selectors";
 
-import css from "./AdvertsList.module.css"
+
 import { fetchData } from "firebase.js";
 import Button from "components/Button/Button";
 import { fetchCards } from "store/reducer";
@@ -44,18 +44,20 @@ const CardsList = () => {
     };
 
     return (
-        <div className={css.adverts_list}>
+        <div className="">
             <ul>
                 {displayedCards.map((card) => (
-                    <li key={card.name} className="">
+                    <li key={card.name} className=" bg-white rounded-3xl mb-8">
                         <CardItem props={card} />
                     </li>
                 ))}
             </ul>
             {displayedCards.length < visibleCards.length && (
-                <Button type={"button"} onClick={handleLoadMore}>
-                    Load more
-                </Button>
+                <div className="mt-16 text-center">
+                    <Button type={"button"} onClick={handleLoadMore} ><span className=" text-white" style={{ padding: "14px 40px" }}>Load more</span>
+
+                    </Button>
+                </div>
             )}
         </div>
     );

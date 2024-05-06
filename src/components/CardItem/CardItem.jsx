@@ -1,11 +1,12 @@
+import sprite from "svg/symbol-defs.svg";
 
-import Button from 'components/Button/Button';
 import Location from 'components/Location/Location';
 import Price from 'components/Price/Price';
 import Rating from 'components/Rating/Rating';
 import Reviews from 'components/Reviews/Reviews';
 import calculateAge from 'helpers/calculateAge';
 import React, { useState } from 'react'
+import Line from "components/Line/Line";
 
 const CardItem = ({ props }) => {
 
@@ -17,20 +18,37 @@ const CardItem = ({ props }) => {
 
     const age = calculateAge(props.birthday);
     return (
-        <div className="">
-            <div>
-                <img className="" alt="nanny`s_photo" src={props.avatar_url} width={96} height={96} />
+        <div className="p-6 flex">
+            <div className='flex items-center relative mr-6 ' style={{
+                borderRadius: "30px",
+                border: "2px solid rgba(240, 63, 59, 0.20)",
+                height: "120px",
+                width: "120px",
+            }}>
+                <img className="max-w-max" alt="nanny`s_photo" style={{ margin: "10px", borderRadius: "15px" }} src={props.avatar_url} width={96} height={96} />
+                <svg className=" fill-white absolute rounded-full  bg-green" style={{
+                    height: "14px",
+                    width: "14px",
+                    top: "9px",
+                    right: "9px",
+                }}>
+                    <use href={`${sprite}#icon-radio-unchecked`} width={14} height={14} />
+                </svg>
             </div>
-            <div className="">
-                <div className="">
-                    <p>Nanny</p>
-                    <h3 className="">{props.name}</h3>
+            <div className=" w-full">
+                <div className="flex justify-between items-start">
+                    <div className="">
+                        <p className="text-gray font-medium text-base">Nanny</p>
+                        <h3 className="text-2xl font-medium mt-2 mb-6">{props.name}</h3>
+                    </div>
 
-                </div>
-                <div className="flex">
-                    <Location props={props} />
-                    <Rating props={props} />
-                    <Price props={props} />
+                    <div className="flex items-center font-medium  text-base">
+                        <Location props={props} />
+                        <Line />
+                        <Rating props={props} />
+                        <Line />
+                        <Price props={props} />
+                    </div>
                 </div>
                 <div className='flex'>
                     <ul >
@@ -50,7 +68,7 @@ const CardItem = ({ props }) => {
                 <p className="">{props.about}</p>
                 {!expanded && (
 
-                    <Button className="" type={"button"} onClick={handleToggleExpand}>Read more</Button>)}
+                    <button className="" type="button" onClick={handleToggleExpand}>Read more</button>)}
                 {expanded && (
                     <div className="card-content">
                         <Reviews user={props} />

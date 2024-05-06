@@ -10,7 +10,18 @@ module.exports = {
 
       xl: "1280px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        white: "#FBFBFB",
+        "teal-900": "#103931;",
+        "stone-200": "rgba(251, 251, 251, 0.40)",
+        gray: "#8A8A89",
+        "light-gray": "#F3F3F3;",
+        green: "#38CD3E",
+        yellow: "#FFC531",
+        black: "#11101C",
+      },
+    },
   },
   plugins: [],
 };

@@ -9,7 +9,7 @@ export default function Home() {
 
 
     return (
-        <div className=" m-4 bg-teal-900 bg-cover bg-center text-white  rounded-3xl lg:m-6 xl:m-8 h-full w-full " style={{ backgroundImage: 'url(/img/bg1.png)' }}>
+        <div className=" m-4 bg-teal-900 bg-cover bg-center text-white  rounded-3xl lg:m-6 xl:m-8 h-full  " style={{ backgroundImage: 'url(/img/bg1.png)' }}>
             <div className={css.bg}>
                 <div className="pb-12 pt-5 px-4 m:px-10 lg: xl:px-24 relative">
                     <Header />
@@ -27,7 +27,7 @@ export default function Home() {
                             </Button>
 
                         </NavLink></div>
-                    <div className=" w-64 lg:w-72 lg:h-28 p-4 bg-white rounded-2xl mr-0 ml-auto flex lg:p-8 ">
+                    <div className=" w-64 lg:w-72 lg:h-28 p-4 bg-white rounded-2xl ml-auto flex lg:p-8 xl:-mr-11">
                         <div className='w-14 h-14  bg-teal-900 rounded-xl flex items-center justify-center mr-4 ' style={{ width: "54px", height: "54px" }}>
                             <svg className='fill-white' width={16} height={16}>
                                 <use href={`${sprite}#icon-checkmark`} />

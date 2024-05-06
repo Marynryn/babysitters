@@ -26,14 +26,16 @@ export const UserMenu = () => {
         IsLoggedIn();
     }
     return (
-        <div className='flex'>
-            <div className='w-10 h-10 bg-white rounded-xl flex items-center justify-center '>
-                <svg className='' width={16} height={16}>
-                    <use href={`${sprite}#icon-avatar`} />
-                </svg>
+        <div className='lg:flex  items-center text-center'>
+            <div className='hidden lg:flex'>
+                <div className='w-10 h-10 bg-white rounded-xl flex items-center justify-center  '>
+                    <svg className='' width={16} height={16}>
+                        <use href={`${sprite}#icon-avatar`} />
+                    </svg>
+                </div>
+                <p className="ml-4 mr-6 flex items-center ">{user.displayName}</p>
             </div>
-            <p className="ml-4 flex items-center mr-auto">{user.displayName}</p>
-            <Button type={'button'} onClick={handleLogout}><span className='px-5 py-1 text-base'>Log Out</span></Button>
+            <Button type={'button'} onClick={handleLogout}><span className=' text-base' style={{ padding: "14px 38px", height: "48px" }}>Log Out</span></Button>
         </div>
     )
 }

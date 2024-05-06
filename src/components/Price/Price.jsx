@@ -1,4 +1,4 @@
-import css from "./Price.module.css"
+
 import ButtonFavorite from "components/ButtonFavorite/ButtonFavorite";
 
 
@@ -6,8 +6,8 @@ const Price = ({ props }) => {
 
 
     return (
-        <div className={css.price_box}>
-            <p className={css.price}>Price / 1 hour{props.price_per_hour}</p>
+        <div className='flex'>
+            <p className="">Price / 1 hour: <span className="text-green mr-12">{props.price_per_hour}$</span></p>
             <ButtonFavorite props={props} />
 
 

@@ -43,7 +43,7 @@ export const Header = () => {
 
                         </svg></button>
                 </div>
-                <div className='hidden lg:flex lg:flex-wrap  lg:justify-between gap-4'>
+                <div className='hidden lg:flex lg:flex-wrap items-center lg:justify-between gap-4'>
                     <AppBar />
                     {isLog ? <UserMenu /> : <AuthNav />}
 

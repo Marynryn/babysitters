@@ -8,7 +8,7 @@ import Loader from './Loader/Loader';
 
 export const Layout = () => {
     return (
-        <div className=' w-full ' >
+        <div className=' ' >
 
             <Suspense fallback={<Loader />}>
                 <Outlet />

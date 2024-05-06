@@ -5,12 +5,11 @@ export const AppBar = () => {
 
 
     return (
-        <>
-            <header className="">
-                <Navigation />
 
-            </header>
-        </>
+
+        <Navigation />
+
+
     )
 }
 
