@@ -34,7 +34,7 @@ export const Header = () => {
     return (
         <>
             <div className=' flex m:flex-wrap  m:justify-between items-center gap-4'>
-                <p className='font-base text-medium flex items-start '>Nanny.Services</p>
+                <p className='font-medium text-2xl flex items-start '>Nanny.Services</p>
 
                 <div className='mr-0 ml-auto lg:hidden w-6 h-6'>
                     <button type='button' onClick={() => toggleModal()}>

@@ -4,9 +4,10 @@ import Location from 'components/Location/Location';
 import Price from 'components/Price/Price';
 import Rating from 'components/Rating/Rating';
 import Reviews from 'components/Reviews/Reviews';
-import calculateAge from 'helpers/calculateAge';
+
 import React, { useState } from 'react'
 import Line from "components/Line/Line";
+import AboutNanny from "components/AboutNanny/AboutNanny";
 
 const CardItem = ({ props }) => {
 
@@ -16,7 +17,7 @@ const CardItem = ({ props }) => {
         setExpanded(!expanded);
     };
 
-    const age = calculateAge(props.birthday);
+
     return (
         <div className="p-6 flex">
             <div className='flex items-center relative mr-6 ' style={{
@@ -50,25 +51,13 @@ const CardItem = ({ props }) => {
                         <Price props={props} />
                     </div>
                 </div>
-                <div className='flex'>
-                    <ul >
-                        <li>
-                            <p>Age: {age}</p>
-                        </li>
 
-                        <li >
-                            <p>Experience: {props.experience}</p></li>
-                        <li >  <p>Kids age: {props.kids_age}</p></li>
-                        <li >  <p>Characters:{props.characters}</p></li>
-                        <li > <p>Education: {props.education}</p></li>
+                <AboutNanny props={props} />
 
 
-                    </ul>
-                </div>
-                <p className="">{props.about}</p>
                 {!expanded && (
 
-                    <button className="" type="button" onClick={handleToggleExpand}>Read more</button>)}
+                    <button className="font-medium text-base underline underline-offset-1" type="button" onClick={handleToggleExpand}>Read more</button>)}
                 {expanded && (
                     <div className="card-content">
                         <Reviews user={props} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
-
+import { toast } from 'react-hot-toast';
 import InputField from 'components/InputField/InputField';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from 'firebase.js';
@@ -12,7 +12,7 @@ const RegistrationForm = ({ type, onClose }) => {
         resolver: yupResolver(authSchema)
     });
     const { handleSubmit, formState: { errors } } = methods;
-
+    toast.error(errors.message);
     const onSubmit = async (data) => {
         const { email, password, name } = data;
         console.log(data);
@@ -30,7 +30,7 @@ const RegistrationForm = ({ type, onClose }) => {
             }
             onClose();
         } catch (error) {
-            console.log(error);
+            toast.error(error.message);
         }
     };
 
@@ -39,25 +39,27 @@ const RegistrationForm = ({ type, onClose }) => {
             <form onSubmit={handleSubmit(onSubmit)} className="block gap-10">
                 <p className="mb-5 text-4xl font-medium">{`${type === 'register' ? 'Registration' : 'Log In'}`}</p>
                 <p className="mb-10 text-s font-base" style={{ color: "rgba(17, 16, 28, 0.50)" }}>{`${type === 'register' ? 'Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information.' : 'Welcome back! Please enter your credentials to access your account and continue your babysitter search.'}`}   </p>
-                <div className="w-full">
+                <div className="w-full relative">
                     {type === 'register' && (
                         <>
                             <InputField name="name" placeholder="Name" />
-                            {errors.name && <span className="error-message">{errors.name.message}</span>}
+
                         </>
                     )}
                     <InputField name="email" placeholder="Email" />
-                    {errors.email && <span className="error-message">{errors.email.message}</span>}
+
                     <InputField name="password" placeholder="Password" />
+
                     {/* <svg className="w-5 h-5 absolute top-3/4 right-1/4 mb-4" >
                         <use href={`${sprite}#icon-eye-off`} width={20} height={20} />
                     </svg> */}
-                    {errors.password && <span className="error-message">{errors.password.message}</span>}
+
                 </div>
                 <div>
                     <button className=' bg-teal-900  border  border-stone-200 rounded-full w-full py-3 text-center mt-8' type="submit" ><span className='text-white'>{`${type === 'login' ? 'Log In' : 'Sign Up'}`}</span></button>
                 </div>
             </form>
+
         </FormProvider>
     );
 };

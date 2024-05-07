@@ -13,7 +13,7 @@ const Reviews = ({ user }) => {
     }
     return (
         <div className=''>
-            <ul className="{css.reviews_list}">
+            <ul className="mb-12 " style={{ marginTop: "34px" }}>
                 {user.reviews.map((review, index) => (<li className='' key={index}>
                     <ReviewItem
 
@@ -22,7 +22,7 @@ const Reviews = ({ user }) => {
                         comment={review.comment}
                     /></li>
                 ))}</ul>
-            <Button type={"button"} onClick={openModal}>Make an appointment</Button>
+            <Button type={"button"} onClick={openModal}><span className="text-white" style={{ padding: "14px 28px" }}>Make an appointment</span></Button>
             <Modal isOpen={modalOpen} onClose={setModalOpen} >
                 <BookingForm props={user} onClose={setModalOpen} />
             </Modal>

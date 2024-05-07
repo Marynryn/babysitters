@@ -38,4 +38,4 @@ export const selectVisibleCards = createSelector(
   }
 );
 
-export const selectFavorites = (state) => state.cards.cards.favorites;
+export const selectFavorites = (state) => state.cards.favorites;

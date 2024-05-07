@@ -20,6 +20,8 @@ module.exports = {
         green: "#38CD3E",
         yellow: "#FFC531",
         black: "#11101C",
+        "light-teal": "rgba(16, 57, 49, 0.20)",
+        "border-gray": "rgba(17, 16, 28, 0.10);",
       },
     },
   },

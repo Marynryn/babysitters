@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-import { selectVisibleCards } from "store/selectors";
-
+import { useDispatch, } from "react-redux";
 
 import { fetchData } from "firebase.js";
 import Button from "components/Button/Button";
 import { fetchCards } from "store/reducer";
 import CardItem from "components/CardItem/CardItem";
-const CardsList = () => {
+
+
+const CardsList = ({ props }) => {
     const dispatch = useDispatch();
-    const visibleCards = useSelector(selectVisibleCards);
-    console.log(visibleCards)
+
     const [displayedCards, setDisplayedCards] = useState([]);
     const cardsPerPage = 3;
     useEffect(() => {
@@ -28,18 +26,18 @@ const CardsList = () => {
 
     useEffect(() => {
 
-        setDisplayedCards(visibleCards.slice(0, cardsPerPage));
-    }, [visibleCards, cardsPerPage]);
+        setDisplayedCards(props.slice(0, cardsPerPage));
+    }, [props, cardsPerPage]);
 
     const handleLoadMore = () => {
 
         const nextPage = Math.ceil(displayedCards.length / cardsPerPage) + 1;
         const startIndex = (nextPage - 1) * cardsPerPage;
-        const endIndex = Math.min(startIndex + cardsPerPage, visibleCards.length);
+        const endIndex = Math.min(startIndex + cardsPerPage, props.length);
 
         setDisplayedCards(prevCards => [
             ...prevCards,
-            ...visibleCards.slice(startIndex, endIndex)
+            ...props.slice(startIndex, endIndex)
         ]);
     };
 
@@ -52,7 +50,7 @@ const CardsList = () => {
                     </li>
                 ))}
             </ul>
-            {displayedCards.length < visibleCards.length && (
+            {displayedCards.length < props.length && (
                 <div className="mt-16 text-center">
                     <Button type={"button"} onClick={handleLoadMore} ><span className=" text-white" style={{ padding: "14px 40px" }}>Load more</span>
 
