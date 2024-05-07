@@ -36,18 +36,34 @@ export const authSchema = yup.object({
     ),
 });
 export const schema = yup.object().shape({
-  address: yup.string().required(),
+  address: yup.string().required("Address is required"),
   phone: yup
     .string()
     .matches(/^[0-9]{5,15}$/, "Phone number must be between 5 and 15 digits")
-    .required(),
+    .required("Phone is required"),
   age: yup
     .number()
     .min(1, "Age must be at least 1")
     .max(18, "Age must be less than 100")
-    .required(),
-  email: yup.string().email().required(),
-  name: yup.string().required(),
+    .required("Age is required"),
+  email: yup
+    .string()
+    .email()
+    .required("Email is required")
+    .matches(
+      /^[a-zA-Z0-9.-_]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/,
+      "Invalid email format"
+    ),
+  name: yup
+    .string()
+    .required()
+    .trim()
+    .min(2, "Name must be at least 2 characters")
+    .max(32, "Name must be no more than 32 characters")
+    .matches(
+      /^[a-zA-Zа-яА-Я0-9\s]*$/,
+      "Name can only contain letters, numbers, and spaces"
+    ),
   comment: yup.string(),
-  meetingTime: yup.object().required(),
+  meetingTime: yup.object().required("please, choose a meeting"),
 });

@@ -52,7 +52,7 @@ const CardsList = ({ props }) => {
             </ul>
             {displayedCards.length < props.length && (
                 <div className="mt-16 text-center">
-                    <Button type={"button"} onClick={handleLoadMore} ><span className=" text-white" style={{ padding: "14px 40px" }}>Load more</span>
+                    <Button type={"button"} onClick={handleLoadMore} ><span className="flex text-white" style={{ padding: "14px 40px", height: "48px", width: "159px" }}>Load more</span>
 
                     </Button>
                 </div>

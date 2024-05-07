@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { toast } from 'react-hot-toast';
 import { Controller, FormProvider, useForm } from 'react-hook-form';
 
 import InputField from 'components/InputField/InputField';
@@ -19,7 +19,12 @@ const BookingForm = ({ props, onClose }) => {
         console.log(data);
         onClose();
     };
+    const errorMessages = Object.values(errors).map(error => error.message);
+    errorMessages.length > 0 && errorMessages.map((message, index) => (
 
+        toast.error(message)
+
+    ))
     return (
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)} className="">

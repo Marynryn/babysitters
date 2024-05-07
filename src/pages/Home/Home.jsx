@@ -16,10 +16,10 @@ export default function Home() {
                     <div className='w-full bg-stone-200 absolute left-0 mt-4' style={{ height: "1px" }} ></div>
                     <h1 className="font-medium text-4xl  md:text-5xl lg:text-6xl xl:text-7xl m:w-3/6  mt-48">Make Life Easier for the Family:</h1>
                     <p className="text-2xl font-normal mt-7 mb-16 m:w-3/6  ">Find Babysitters Online for All Occasions</p>
-                    <div className='mb-8'>
+                    <div className='mb-8' style={{ height: "60px", width: "231px" }}>
                         <NavLink to="/nannies" >
 
-                            <Button ><span className="flex items-center px-8 py-4 ">Get started
+                            <Button type={"button "}><span className="flex items-center   text-xl" style={{ padding: "18px 50px", height: "60px", width: "230px" }} >Get started
                                 <svg className="ml-4 fill-white " width={16} height={16}>
                                     <use href={`${sprite}#icon-arrow-up-right2`} />
 
@@ -27,7 +27,7 @@ export default function Home() {
                             </Button>
 
                         </NavLink></div>
-                    <div className=" w-64 lg:w-72 lg:h-28 p-4 bg-white rounded-2xl ml-auto flex lg:p-8 xl:-mr-11">
+                    <div className=" p-4 bg-white rounded-2xl ml-auto flex items-center lg:p-8 xl:-mr-11" style={{ height: "118", width: "284px" }}>
                         <div className='w-14 h-14  bg-teal-900 rounded-xl flex items-center justify-center mr-4 ' style={{ width: "54px", height: "54px" }}>
                             <svg className='fill-white' width={16} height={16}>
                                 <use href={`${sprite}#icon-checkmark`} />

@@ -12,28 +12,51 @@ const RegistrationForm = ({ type, onClose }) => {
         resolver: yupResolver(authSchema)
     });
     const { handleSubmit, formState: { errors } } = methods;
-    toast.error(errors.message);
-    const onSubmit = async (data) => {
-        const { email, password, name } = data;
+
+
+    const onSubmit = methods.handleSubmit(async (data) => {
         console.log(data);
-        try {
-            if (type === 'login') {
-                await signInWithEmailAndPassword(auth, email, password);
-            } else {
-                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                console.log(userCredential)
-                if (name) {
-                    await updateProfile(userCredential.user, {
-                        displayName: name
-                    });
+        const { email, password, name } = data;
+        const errorMessages = [];
+
+        // Проверяем наличие ошибок и добавляем их в массив errorMessages
+        if (errors) {
+            Object.values(errors).forEach(error => {
+                if (error.message) {
+                    errorMessages.push(error.message);
                 }
+            });
+        }
+
+        try {
+            if (errorMessages.length > 0) {
+                // Выводим сообщения об ошибках в тостере
+                errorMessages.forEach(message => toast.error(message));
+            } else {
+                // Ваша логика обработки формы при отсутствии ошибок валидации
+                if (type === 'login') {
+                    await signInWithEmailAndPassword(auth, email, password);
+                } else {
+                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                    console.log(userCredential)
+                    if (name) {
+                        await updateProfile(userCredential.user, {
+                            displayName: name
+                        });
+                    }
+                }
+                onClose();
             }
-            onClose();
         } catch (error) {
             toast.error(error.message);
         }
-    };
+    });
+    const errorMessages = Object.values(errors).map(error => error.message);
+    errorMessages.length > 0 && errorMessages.map((message, index) => (
 
+        toast.error(message)
+
+    ))
     return (
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)} className="block gap-10">

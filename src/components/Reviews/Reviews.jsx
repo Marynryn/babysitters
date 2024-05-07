@@ -22,7 +22,7 @@ const Reviews = ({ user }) => {
                         comment={review.comment}
                     /></li>
                 ))}</ul>
-            <Button type={"button"} onClick={openModal}><span className="text-white" style={{ padding: "14px 28px" }}>Make an appointment</span></Button>
+            <Button type={"button"} onClick={openModal}><span className="text-white flex" style={{ padding: "14px 28px", height: "48px", width: "215px" }}>Make an appointment</span></Button>
             <Modal isOpen={modalOpen} onClose={setModalOpen} >
                 <BookingForm props={user} onClose={setModalOpen} />
             </Modal>
