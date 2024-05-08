@@ -30,7 +30,7 @@ const MobileMenu = ({ isOpen, onClose, isLog }) => {
     }, [handleCloseModal]);
 
     return isOpen ? ReactDOM.createPortal(
-        <div className="fixed inset-0 overflow-y-auto  flex justify-center items-center lg:hidden" onClick={handleBackdropClick}>
+        <div className="fixed inset-0  flex justify-center items-center lg:hidden" onClick={handleBackdropClick}>
             <div className="fixed inset-0 bg-black opacity-50"></div>
 
             <div className="absolute right-0 top-0 h-full bg-teal-900 text-white w-80 shadow-lg p-4">
