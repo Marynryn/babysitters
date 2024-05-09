@@ -9,6 +9,7 @@ export const selectVisibleCards = createSelector(
   selectGetCards,
   selectGetFilter,
   (cards, filter) => {
+    console.log(cards);
     switch (filter) {
       case "AtoZ":
         return cards.slice().sort((a, b) => a.name.localeCompare(b.name));

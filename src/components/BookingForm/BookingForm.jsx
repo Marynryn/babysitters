@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { toast } from 'react-hot-toast';
+
 import { Controller, FormProvider, useForm } from 'react-hook-form';
 
 import InputField from 'components/InputField/InputField';
@@ -8,23 +8,21 @@ import sprite from "svg/symbol-defs.svg";
 import { generateTimeOptions } from 'helpers/generateTimeOptions';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from 'schema/schema';
+import ErrorBubble from 'components/ErrorBubble/ErrorBubble';
 
 const BookingForm = ({ props, onClose }) => {
     const [isOpen, setIsOpen] = useState(false);
     const methods = useForm({
         resolver: yupResolver(schema)
     });
-    const { handleSubmit, control, formState: { errors } } = methods;
+    const { handleSubmit, control, formState: { errors }, register } = methods;
+
     const onSubmit = (data) => {
+
         console.log(data);
         onClose();
     };
-    const errorMessages = Object.values(errors).map(error => error.message);
-    errorMessages.length > 0 && errorMessages.map((message, index) => (
 
-        toast.error(message)
-
-    ))
     return (
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)} className="">
@@ -47,28 +45,30 @@ const BookingForm = ({ props, onClose }) => {
 
                     </div>
                     <div className='flex gap-2'>
-
-                        <InputField type="number" name="age" placeholder="Child's age" />
-
-
-                        <div className="  border border-border-gray w-full h-12 mb-4  items-center rounded-xl relative">
+                        <div className=' border border-border-gray  h-12 mb-4  items-center rounded-xl relative'>
+                            <input type="number" name="age" placeholder="Child's age" className=" bg-white pl-4 focus:border-teal-900  h-full w-full rounded-xl placeholder-black text-base font-normal text-black" {...register("age")} />
+                            {errors.age && <ErrorBubble message={errors.age.message} />}
+                        </div>
+                        <div className="  border border-border-gray  h-12 mb-4  items-center rounded-xl relative">
 
                             <input
                                 type="text"
                                 name="meetingTime"
                                 value={methods.watch("meetingTime.value") || "00:00"}
                                 readOnly
-                                className=' bg-white pl-4 focus:border-teal-900 w-full h-full rounded-xl placeholder-black text-base font-normal text-black'
+                                required
+                                className=' bg-white pl-4 focus:border-teal-900  h-full w-full rounded-xl placeholder-black text-base font-normal text-black'
                             />
                             <svg className="absolute right-4 top-4 fill-white stroke-black" onClick={() => setIsOpen(!isOpen)} width={20} height={20}>
                                 <use href={`${sprite}#icon-clock`} />
                             </svg>
+                            {errors.meetingTime && <ErrorBubble message={errors.meetingTime.message} />}
                             {isOpen && (
                                 <div className="right-0 absolute rounded-3xl text-center" style={{ width: "151px", height: "180px", fill: "#FFF", boxShadow: "rgba(0, 0, 0, 0.07))" }}>
                                     <Controller
                                         name="meetingTime"
                                         control={control}
-                                        defaultValue={null}
+                                        defaultValue={''}
                                         render={({ field }) => (
                                             <Select
                                                 {...field}
@@ -120,6 +120,7 @@ const BookingForm = ({ props, onClose }) => {
                 </div>
                 <button type="submit" className=' w-full mt-10 bg-teal-900 rounded-full ' style={{ height: "48px", border: "solid 1px", borderColor: "rgba(251, 251, 251, 0.40)" }} ><span className=' text-white'>Send</span></button>
             </form>
+
         </FormProvider>
     );
 };

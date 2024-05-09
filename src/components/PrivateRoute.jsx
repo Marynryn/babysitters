@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
     const user = IsLoggedIn();
-    console.log(user)
+
     return user ? <Component /> : <Navigate to={redirectTo} />;
 };
 

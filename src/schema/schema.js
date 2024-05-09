@@ -39,12 +39,12 @@ export const schema = yup.object().shape({
   address: yup.string().required("Address is required"),
   phone: yup
     .string()
-    .matches(/^[0-9]{5,15}$/, "Phone number must be between 5 and 15 digits")
-    .required("Phone is required"),
+    .required("Phone is required")
+    .matches(/^[0-9]{5,15}$/, "Phone  must be 5 - 15 digits"),
   age: yup
-    .number()
+    .number("Age must be a number")
     .min(1, "Age must be at least 1")
-    .max(18, "Age must be less than 100")
+    .max(18, "Age must be less than 18")
     .required("Age is required"),
   email: yup
     .string()
@@ -56,7 +56,7 @@ export const schema = yup.object().shape({
     ),
   name: yup
     .string()
-    .required()
+    .required("Name is required")
     .trim()
     .min(2, "Name must be at least 2 characters")
     .max(32, "Name must be no more than 32 characters")
@@ -65,5 +65,5 @@ export const schema = yup.object().shape({
       "Name can only contain letters, numbers, and spaces"
     ),
   comment: yup.string(),
-  meetingTime: yup.object().required("please, choose a meeting"),
+  meetingTime: yup.object().required("Please, choose a meeting"),
 });

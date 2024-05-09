@@ -17,7 +17,7 @@ export const Navigation = () => {
 
     return (
         <nav className='lg:items-center  text-center'>
-            <ul className='block lg:h-10 lg:flex text-center mb-4 lg:mb-0 lg:justify-center  lg:items-center lg:mr-16 xl:mr-24'>
+            <ul className='block lg:h-10 lg:flex text-center mb-4 lg:mb-0 lg:justify-center  lg:items-center '>
                 <li id="1" className='font-normal mb-3 lg:mb-0 text-base lg:mr-8 xl:mr-10 '>
                     <NavLink to="/">
                         Home

@@ -33,8 +33,8 @@ export const Header = () => {
 
     return (
         <>
-            <div className=' flex m:flex-wrap  m:justify-between items-center gap-4'>
-                <p className='font-medium text-2xl flex items-start '>Nanny.Services</p>
+            <div className=' flex justify-between items-center gap-4'>
+                <p className=' text-lg font-medium xl:text-2xl flex items-start '>Nanny.Services</p>
 
                 <div className='mr-0 ml-auto lg:hidden w-6 h-6'>
                     <button type='button' onClick={() => toggleModal()}>
@@ -43,13 +43,14 @@ export const Header = () => {
 
                         </svg></button>
                 </div>
-                <div className='hidden lg:flex lg:flex-wrap items-center lg:justify-between gap-4'>
-                    <AppBar />
+                {/* <div className='hidden lg:flex lg:flex-wrap items-center lg:justify-between gap-4'> */}
+                <div className='hidden lg:block '><AppBar /></div>
+                <div className='hidden lg:block'>
                     {isLog ? <UserMenu /> : <AuthNav />}
-
                 </div>
-
             </div>
+
+            {/* </div> */}
             <MobileMenu isOpen={modalOpen} onClose={setModalOpen} isLog={isLog} />
         </>
     )

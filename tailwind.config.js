@@ -7,8 +7,8 @@ module.exports = {
       m: "490px",
 
       lg: "768px",
-
-      xl: "1280px",
+      xl: "1024px",
+      "2xl": "1280px",
     },
     extend: {
       colors: {

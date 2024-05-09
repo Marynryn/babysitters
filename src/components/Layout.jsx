@@ -11,7 +11,7 @@ export const Layout = () => {
 
 
     return (
-        <div className=' '  >
+        <div className=''  >
 
             <Suspense fallback={<Loader />}>
                 <Outlet />

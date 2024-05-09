@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import InputField from 'components/InputField/InputField';
@@ -6,44 +6,34 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from 'firebase.js';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { authSchema } from 'schema/schema';
-// import sprite from "svg/symbol-defs.svg";
+import sprite from "svg/symbol-defs.svg";
+import ErrorBubble from 'components/ErrorBubble/ErrorBubble';
+
+
+
 const RegistrationForm = ({ type, onClose }) => {
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const methods = useForm({
         resolver: yupResolver(authSchema)
     });
-    const { handleSubmit, formState: { errors } } = methods;
-
-
+    const { handleSubmit, formState: { errors }, register } = methods;
+    const togglePasswordVisibility = () => {
+        setIsPasswordVisible(!isPasswordVisible);
+    };
     const onSubmit = methods.handleSubmit(async (data) => {
         console.log(data);
         const { email, password, name } = data;
-        const errorMessages = [];
-
-        // Проверяем наличие ошибок и добавляем их в массив errorMessages
-        if (errors) {
-            Object.values(errors).forEach(error => {
-                if (error.message) {
-                    errorMessages.push(error.message);
-                }
-            });
-        }
 
         try {
-            if (errorMessages.length > 0) {
-                // Выводим сообщения об ошибках в тостере
-                errorMessages.forEach(message => toast.error(message));
+            if (type === 'login') {
+                await signInWithEmailAndPassword(auth, email, password);
             } else {
-                // Ваша логика обработки формы при отсутствии ошибок валидации
-                if (type === 'login') {
-                    await signInWithEmailAndPassword(auth, email, password);
-                } else {
-                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                    console.log(userCredential)
-                    if (name) {
-                        await updateProfile(userCredential.user, {
-                            displayName: name
-                        });
-                    }
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                console.log(userCredential)
+                if (name) {
+                    await updateProfile(userCredential.user, {
+                        displayName: name
+                    });
                 }
                 onClose();
             }
@@ -51,12 +41,7 @@ const RegistrationForm = ({ type, onClose }) => {
             toast.error(error.message);
         }
     });
-    const errorMessages = Object.values(errors).map(error => error.message);
-    errorMessages.length > 0 && errorMessages.map((message, index) => (
 
-        toast.error(message)
-
-    ))
     return (
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)} className="block gap-10">
@@ -70,13 +55,18 @@ const RegistrationForm = ({ type, onClose }) => {
                         </>
                     )}
                     <InputField name="email" placeholder="Email" />
-
-                    <InputField name="password" placeholder="Password" />
-
-                    {/* <svg className="w-5 h-5 absolute top-3/4 right-1/4 mb-4" >
-                        <use href={`${sprite}#icon-eye-off`} width={20} height={20} />
-                    </svg> */}
-
+                    <div className='relative'>
+                        <input type={isPasswordVisible ? 'text' : 'password'} name="password" placeholder="Password" className='border border-border-gray w-full h-12 mb-4 pl-4 focus:border-teal-900 rounded-xl placeholder-black text-base font-normal text-black' {...register("password")} />
+                        {errors.password && <ErrorBubble message={errors.password.message} />}
+                        <button type='button' className='absolute right-4 ' style={{ top: "14px" }} onClick={togglePasswordVisibility}>
+                            {isPasswordVisible ? (<svg className="w-5 h-5  top-3/4 right-1/4 mb-4 fill-white stroke-black" >
+                                <use href={`${sprite}#icon-eye`} width={20} height={20} />
+                            </svg>) :
+                                (<svg className="w-5 h-5  top-3/4 right-1/4 mb-4 fill-white stroke-black" >
+                                    <use href={`${sprite}#icon-eye-off`} width={20} height={20} />
+                                </svg>)}
+                        </button>
+                    </div>
                 </div>
                 <div>
                     <button className=' bg-teal-900  border  border-stone-200 rounded-full w-full py-3 text-center mt-8' type="submit" ><span className='text-white'>{`${type === 'login' ? 'Log In' : 'Sign Up'}`}</span></button>
