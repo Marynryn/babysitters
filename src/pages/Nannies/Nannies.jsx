@@ -1,13 +1,27 @@
-
+import { selectVisibleCards } from "store/selectors";
 import Header from "components/Header.jsx/Header";
-
+import { useSelector } from "react-redux";
 import CardsList from "components/CardsList/CardsList";
 import Filters from "components/Filters/Filters";
-
+import { useDispatch, } from "react-redux";
+import { setCards } from "store/reducer";
+import { fetchData } from "firebase.js";
+import { useEffect } from "react";
 
 const Nannies = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        const fetchAndSetData = async () => {
+            const cards = await fetchData();
 
+            if (cards) {
+                dispatch(setCards(cards));
+            }
+        };
 
+        fetchAndSetData();
+    }, [dispatch]);
+    const visibleCards = useSelector(selectVisibleCards);
     return (<>
         <div className="  lg:justify-between bg-teal-900 text-white  " style={{ padding: "20px calc(128/1440 * 100%) " }} >
             <Header />
@@ -18,7 +32,7 @@ const Nannies = () => {
                 <Filters />
             </div>
             <div>
-                <CardsList />
+                <CardsList props={visibleCards} />
             </div>
         </div ></>
     )

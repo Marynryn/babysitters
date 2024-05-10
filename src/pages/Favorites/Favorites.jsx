@@ -10,18 +10,17 @@ import { selectFavorites } from "store/selectors";
 
 const Favorites = () => {
     const favoriteCards = useSelector(selectFavorites);
-    const reverseCards = favoriteCards.reverse();
 
     return (<>
         <div className="w-screen  lg:justify-between bg-teal-900 text-white  " style={{ padding: "20px calc(128/1440 * 100%) " }} >
             <Header />
         </div >
-        <div className=" h-full w-screen bg-light-gray" style={{ padding: "0 calc(128/1440 * 100%) 96px" }} >
+        <div className="h-full  w-screen bg-light-gray" style={{ padding: "0 calc(128/1440 * 100%) 96px", minHeight: "700px" }} >
             <div className="pt-16">
                 <Filters />
             </div>
-            <div>
-                <CardsList props={reverseCards} />
+            <div className=" bg-light-gray">
+                <CardsList props={favoriteCards} />
             </div>
         </div ></>
     );

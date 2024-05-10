@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 export default function Home() {
 
     return (
-        <div className="h-full">
+        <div className="h-full bg-white">
             <div className=" bg-teal-900 bg bg-cover  bg-center text-white  rounded-3xl relative" style={{
                 margin: "calc(32 / 1440 * 100%)",
                 width: "calc(100% - ((32 / 1440 * 100%) * 2))",
