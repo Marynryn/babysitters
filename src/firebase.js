@@ -3,11 +3,8 @@ import { getAuth } from "firebase/auth";
 
 import { getDatabase, ref, get } from "firebase/database";
 
-const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
-
-console.log(API_KEY);
 const firebaseConfig = {
-  apiKey: API_KEY,
+  apiKey: "AIzaSyD489JVZTN88t0iLOihy1HLmkaJ_Ps3FLY",
   authDomain: "babysitters-6fbe8.firebaseapp.com",
   projectId: "babysitters-6fbe8",
   storageBucket: "babysitters-6fbe8.appspot.com",
