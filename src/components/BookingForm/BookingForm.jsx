@@ -25,7 +25,7 @@ const BookingForm = ({ props, onClose }) => {
 
     return (
         <FormProvider {...methods}>
-            <div className=''>
+            <div className='overflow-y-auto'>
                 <h2 className=" text-3xl font-medium mb-5" style={{ "@media screen and (minWidth:1024px)": { fontSize: "40px", lineHeight: "48px " } }}>Make an appointment with a babysitter</h2>
                 <p className="text-base font-normal text-gray mb-10">Arranging a meeting with a caregiver for your child is the first step to creating a safe and comfortable environment. Fill out the form below so we can match you with the perfect care partner.</p>
                 <div className="flex mb-10" style={{ gap: "14px" }}>
