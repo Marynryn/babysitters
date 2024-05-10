@@ -1,4 +1,4 @@
-import Button from "components/Button/Button";
+
 import Header from "components/Header.jsx/Header";
 import "./Home.css"
 import sprite from "svg/symbol-defs.svg";
