@@ -1,6 +1,6 @@
-import { selectVisibleCards } from "store/selectors";
+
 import Header from "components/Header.jsx/Header";
-import { useSelector } from "react-redux";
+
 import CardsList from "components/CardsList/CardsList";
 import Filters from "components/Filters/Filters";
 
