@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/babysitters/static/css/main.cde0a5da.css",
-    "main.js": "/babysitters/static/js/main.7129ffd4.js",
+    "main.css": "/babysitters/static/css/main.54e0b1b7.css",
+    "main.js": "/babysitters/static/js/main.6feed488.js",
     "static/css/382.f2abe879.chunk.css": "/babysitters/static/css/382.f2abe879.chunk.css",
     "static/js/382.6ea80eec.chunk.js": "/babysitters/static/js/382.6ea80eec.chunk.js",
     "static/js/428.7ac484b6.chunk.js": "/babysitters/static/js/428.7ac484b6.chunk.js",
     "static/js/308.1435e33a.chunk.js": "/babysitters/static/js/308.1435e33a.chunk.js",
     "static/js/291.f8677423.chunk.js": "/babysitters/static/js/291.f8677423.chunk.js",
     "static/js/404.15afb04b.chunk.js": "/babysitters/static/js/404.15afb04b.chunk.js",
-    "static/js/851.5f0fee61.chunk.js": "/babysitters/static/js/851.5f0fee61.chunk.js",
+    "static/js/851.f15d26ea.chunk.js": "/babysitters/static/js/851.f15d26ea.chunk.js",
     "static/js/299.e5f00ab9.chunk.js": "/babysitters/static/js/299.e5f00ab9.chunk.js",
     "static/media/bg1.png": "/babysitters/static/media/bg1.4abe88267c63f5ba330a.png",
     "static/media/HelveticaNeueBold.otf": "/babysitters/static/media/HelveticaNeueBold.1baa6c20d3e22be14c0a.otf",
@@ -16,19 +16,19 @@
     "static/media/HelveticaNeueMedium.otf": "/babysitters/static/media/HelveticaNeueMedium.38884ffafe8888205009.otf",
     "static/media/symbol-defs.svg": "/babysitters/static/media/symbol-defs.655dd4efcaaa696c59eed757047d665f.svg",
     "index.html": "/babysitters/index.html",
-    "main.cde0a5da.css.map": "/babysitters/static/css/main.cde0a5da.css.map",
-    "main.7129ffd4.js.map": "/babysitters/static/js/main.7129ffd4.js.map",
+    "main.54e0b1b7.css.map": "/babysitters/static/css/main.54e0b1b7.css.map",
+    "main.6feed488.js.map": "/babysitters/static/js/main.6feed488.js.map",
     "382.f2abe879.chunk.css.map": "/babysitters/static/css/382.f2abe879.chunk.css.map",
     "382.6ea80eec.chunk.js.map": "/babysitters/static/js/382.6ea80eec.chunk.js.map",
     "428.7ac484b6.chunk.js.map": "/babysitters/static/js/428.7ac484b6.chunk.js.map",
     "308.1435e33a.chunk.js.map": "/babysitters/static/js/308.1435e33a.chunk.js.map",
     "291.f8677423.chunk.js.map": "/babysitters/static/js/291.f8677423.chunk.js.map",
     "404.15afb04b.chunk.js.map": "/babysitters/static/js/404.15afb04b.chunk.js.map",
-    "851.5f0fee61.chunk.js.map": "/babysitters/static/js/851.5f0fee61.chunk.js.map",
+    "851.f15d26ea.chunk.js.map": "/babysitters/static/js/851.f15d26ea.chunk.js.map",
     "299.e5f00ab9.chunk.js.map": "/babysitters/static/js/299.e5f00ab9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cde0a5da.css",
-    "static/js/main.7129ffd4.js"
+    "static/css/main.54e0b1b7.css",
+    "static/js/main.6feed488.js"
   ]
 }
