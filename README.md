@@ -47,7 +47,7 @@ Nanny.Services is built using the following technologies:
 ## Demo
 
 ![Screenshot of the homepage](/src/img/screenshots/home-page.png)
-![Screenshot of the nanny`s card](/src/img/screenshots/nanny`s-card.png)
+![Screenshot of the card](/src/img/screenshots/card.png)
 ![Screenshot of the booking form](/src/img/screenshots/booking-form.png)
 
 ## Author
