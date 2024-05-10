@@ -1,6 +1,12 @@
 const ErrorBubble = ({ message }) => {
+
+    if (/age must be a `number` type/i.test(message)) {
+        message = "Age must be a number";
+    }
+
+
     return (
-        <div className="absolute -right-8 -top-4 mt-1 ml-4 bg-red-400 text-white px-2 py-1 rounded  text-sm z-10">
+        <div className="absolute  -top-4 mt-1 right-0 bg-red-400 text-white  py-1 rounded  text-xs z-50 " style={{ padding: "4px 3px" }}>
             {message}
         </div>
     );

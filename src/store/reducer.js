@@ -25,7 +25,7 @@ const mySlice = createSlice({
         (favorite) => favorite.name !== payload
       );
     },
-    fetchCards: (state, action) => {
+    setCards: (state, action) => {
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;
@@ -55,5 +55,5 @@ export const {
   deselectFilter,
   addToFavorites,
   removeFromFavorites,
-  fetchCards,
+  setCards,
 } = mySlice.actions;

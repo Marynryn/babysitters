@@ -41,7 +41,7 @@ export const UserMenu = () => {
                     <p className="ml-4 mr-6 flex items-center">{user.displayName}</p>
                 </div>
             ) : null}
-            <Button type={'button'} onClick={handleLogout}><span className='flex  text-sm xl:text-base' style={{ padding: "14px 36px", height: "48px" }}>Log Out</span></Button>
+            <Button type={'button'} onClick={handleLogout}><span className='flex items-center text-xs xl:text-base' style={{ padding: "14px 30px", height: "48px" }}>Log Out</span></Button>
         </div>
     )
 }

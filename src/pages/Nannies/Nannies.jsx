@@ -7,7 +7,7 @@ import Filters from "components/Filters/Filters";
 
 const Nannies = () => {
 
-    const visibleCards = useSelector(selectVisibleCards);
+
     return (<>
         <div className="  lg:justify-between bg-teal-900 text-white  " style={{ padding: "20px calc(128/1440 * 100%) " }} >
             <Header />
@@ -18,7 +18,7 @@ const Nannies = () => {
                 <Filters />
             </div>
             <div>
-                <CardsList props={visibleCards} />
+                <CardsList />
             </div>
         </div ></>
     )

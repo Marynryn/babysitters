@@ -1,12 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+
 import { getDatabase, ref, get } from "firebase/database";
 
-// const API_KEY = "AIzaSyD489JVZTN88t0iLOihy1HLmkaJ_Ps3FLY";
+const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 
-// console.log(API_KEY);
+console.log(API_KEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyD489JVZTN88t0iLOihy1HLmkaJ_Ps3FLY",
+  apiKey: API_KEY,
   authDomain: "babysitters-6fbe8.firebaseapp.com",
   projectId: "babysitters-6fbe8",
   storageBucket: "babysitters-6fbe8.appspot.com",
@@ -16,7 +17,7 @@ const firebaseConfig = {
 
 export const fetchData = async () => {
   const db = getDatabase();
-  const dataRef = ref(db); // ссылка на корневой узел базы данных
+  const dataRef = ref(db);
 
   try {
     const snapshot = await get(dataRef);

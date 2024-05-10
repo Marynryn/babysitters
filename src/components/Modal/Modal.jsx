@@ -31,8 +31,8 @@ const Modal = ({ isOpen, onClose, children }) => {
     }, [handleCloseModal]);
 
     return isOpen ? ReactDOM.createPortal(
-        <div className="h-full w-full fixed overflow-y bg-slate-600 z-99 top-0 left-0  " style={{ minWidth: "320px" }} onClick={handleBackdropClick}>
-            <div className='top-2/4 left-1/2 relative  absolute z-70 bg-white rounded-2xl -translate-x-1/2 -translate-y-2/4 ' style={{ width: "calc(565 / 1440 * 100%)", minWidth: "300px", padding: "calc(64 / 1440 * 100%)" }}>
+        <div className="h-screen w-full flex items-center justify-center fixed bg-slate-600 z-40 top-0 left-0  " style={{ minWidth: "320px" }} onClick={handleBackdropClick}>
+            <div className=' overflow-y-auto  relative   z-30 bg-white rounded-2xl  ' style={{ width: "calc(565 / 1440 * 100%)", minWidth: "300px", padding: " calc(64 / 1440 * 100%)", maxHeight: "95%" }}>
                 <button type='button' className=' flex mr-0 ml-auto absolute top-4 right-4' onClick={handleCloseModal}>
                     <svg className="w-8 h-8   " >
                         <use href={`${sprite}#icon-x`} width={32} height={32} />

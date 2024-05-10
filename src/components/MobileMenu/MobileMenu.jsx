@@ -39,7 +39,7 @@ const MobileMenu = ({ isOpen, onClose, isLog }) => {
                         <use href={`${sprite}#icon-x`} width={16} height={16} />
                     </svg>
                 </button>
-                <div className='text-center mt-24'>
+                <div className='text-center mt-24 h-52 '>
                     <AppBar />
                     {isLog ? <UserMenu /> : <AuthNav />}
                 </div>
