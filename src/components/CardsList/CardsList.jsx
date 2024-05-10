@@ -5,7 +5,7 @@ import CardItem from "components/CardItem/CardItem";
 
 const CardsList = ({ props }) => {
 
-    console.log(props)
+
     const [displayedCards, setDisplayedCards] = useState([]);
     const cardsPerPage = 3;
 
