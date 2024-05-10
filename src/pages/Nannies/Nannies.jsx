@@ -26,7 +26,7 @@ const Nannies = () => {
         <div className="  lg:justify-between bg-teal-900 text-white  " style={{ padding: "20px calc(128/1440 * 100%) " }} >
             <Header />
         </div >
-        <div className="   bg-light-gray" style={{ padding: "0 calc(128/1440 * 100%) 96px" }} >
+        <div className="   bg-light-gray" style={{ padding: "0 calc(128/1440 * 100%) 96px", minHeight: "100vh" }} >
 
             <div className="pt-16">
                 <Filters />
