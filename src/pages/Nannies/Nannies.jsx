@@ -30,6 +30,7 @@ const Nannies = () => {
 
             <div className="pt-16">
                 <Filters />
+
             </div>
             <div>
                 <CardsList props={visibleCards} />

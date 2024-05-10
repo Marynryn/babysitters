@@ -44,9 +44,9 @@ export const Filters = () => {
                     height: "48px",
                     borderRadius: '14px',
                     border: 'none',
-                    boxShadow: state.isFocused ? '0 0 0 2px rgba(0,0,0,0.2)' : 'none', // Убирает тень при фокусировке
+                    boxShadow: state.isFocused ? '0 0 0 2px rgba(0,0,0,0.2)' : 'none',
                     '&:hover': {
-                        border: 'none' // Убирает границу при наведении
+                        border: 'none'
                     }
                 }),
                 singleValue: (provided) => ({
@@ -76,7 +76,7 @@ export const Filters = () => {
                     padding: "8px 0",
                     marginRight: "18px",
                     color: 'white', '&:hover': {
-                        color: 'white' // Убирает границу при наведении
+                        color: 'white'
                     }
                 }),
                 menu: (provided) => ({
@@ -91,9 +91,6 @@ export const Filters = () => {
                     display: "inline-flex",
                     gap: "12px",
                     color: "rgba(17, 16, 28, 0.30)",
-
-
-
 
                 }),
                 option: (provided, state) => ({

@@ -1,4 +1,4 @@
-import { auth } from "firebase.js"; // Подставьте путь к вашему файлу firebase.js
+import { auth } from "firebase.js";
 
 export const IsLoggedIn = () => {
   const user = auth.currentUser;

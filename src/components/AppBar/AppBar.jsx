@@ -5,11 +5,7 @@ export const AppBar = () => {
 
 
     return (
-
-
         <Navigation />
-
-
     )
 }
 

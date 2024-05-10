@@ -38,7 +38,7 @@ const RegistrationForm = ({ type, onClose }) => {
                 onClose();
             }
         } catch (error) {
-            toast.error(error.message);
+            toast.error("Invalid email or password");
         }
     });
 
@@ -49,10 +49,10 @@ const RegistrationForm = ({ type, onClose }) => {
                 <p className="mb-10 text-s font-base" style={{ color: "rgba(17, 16, 28, 0.50)" }}>{`${type === 'register' ? 'Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information.' : 'Welcome back! Please enter your credentials to access your account and continue your babysitter search.'}`}   </p>
                 <div className="w-full relative">
                     {type === 'register' && (
-                        <>
-                            <InputField name="name" placeholder="Name" />
 
-                        </>
+                        <InputField name="name" placeholder="Name" />
+
+
                     )}
                     <InputField name="email" placeholder="Email" />
                     <div className='relative'>
@@ -69,7 +69,7 @@ const RegistrationForm = ({ type, onClose }) => {
                     </div>
                 </div>
                 <div>
-                    <button className=' bg-teal-900  border  border-stone-200 rounded-full w-full py-3 text-center mt-8' type="submit" ><span className='text-white'>{`${type === 'login' ? 'Log In' : 'Sign Up'}`}</span></button>
+                    <button className=' bg-teal-900  border  border-stone-200 rounded-full w-full py-3 text-center mt-8 text-white  hover:bg-light-teal' type="submit" ><span className=''>{`${type === 'login' ? 'Log In' : 'Sign Up'}`}</span></button>
                 </div>
             </form>
 

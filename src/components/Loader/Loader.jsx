@@ -4,10 +4,10 @@ import { ThreeCircles } from "react-loader-spinner"
 
 const Loader = () => {
     return (
-        <div className="block justify-center items-center m-auto ">
+        <div className="flex justify-center items-center m-auto h-screen">
             <ThreeCircles
-                height="100"
-                width="100"
+                height="200"
+                width="200"
                 color="#4fa94d"
                 wrapperStyle={{}}
                 wrapperClass=""

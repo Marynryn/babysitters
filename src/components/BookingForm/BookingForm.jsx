@@ -121,7 +121,7 @@ const BookingForm = ({ props, onClose }) => {
 
 
                     </div>
-                    <button type="submit" className=' w-full mt-10 bg-teal-900 rounded-full ' style={{ height: "48px", border: "solid 1px", borderColor: "rgba(251, 251, 251, 0.40)" }} ><span className=' text-white'>Send</span></button>
+                    <button type="submit" className=' text-white w-full mt-10 bg-teal-900 rounded-full hover:bg-light-teal hover:text-teal-900' style={{ height: "48px", border: "solid 1px", borderColor: "rgba(251, 251, 251, 0.40)" }} ><span className=''>Send</span></button>
 
                 </form>
             </div>

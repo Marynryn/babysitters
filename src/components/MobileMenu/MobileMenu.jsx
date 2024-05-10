@@ -34,7 +34,7 @@ const MobileMenu = ({ isOpen, onClose, isLog }) => {
             <div className="fixed inset-0 bg-black opacity-50"></div>
 
             <div className="absolute right-0 top-0 h-full bg-teal-900 text-white w-80 shadow-lg p-4">
-                <button type='button' className=' flex mr-0 ml-auto  ' onClick={handleCloseModal}>
+                <button type='button' className=' flex mr-0 ml-auto hover:scale-110 ' onClick={handleCloseModal}>
                     <svg className="w-4 h-4 fill-white" >
                         <use href={`${sprite}#icon-x`} width={16} height={16} />
                     </svg>

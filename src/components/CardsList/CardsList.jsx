@@ -38,9 +38,10 @@ const CardsList = ({ props }) => {
             </ul>
             {displayedCards.length < props.length && (
                 <div className="mt-16 text-center">
-                    <Button type={"button"} onClick={handleLoadMore} ><span className="flex text-white" style={{ padding: "14px 40px", height: "48px", width: "159px" }}>Load more</span>
+                    <button className=
+                        ' bg-teal-900  text-white rounded-full hover:bg-light-teal hover:text-teal-900 ' style={{ border: "solid 1px", borderColor: "rgba(251, 251, 251, 0.40)" }} type={"button"} onClick={handleLoadMore} ><span className="flex" style={{ padding: "14px 40px", height: "48px", width: "159px" }}>Load more</span>
 
-                    </Button>
+                    </button>
                 </div>
             )}
         </div>

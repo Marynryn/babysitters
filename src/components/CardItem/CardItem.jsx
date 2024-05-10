@@ -68,7 +68,7 @@ const CardItem = ({ props }) => {
 
                 {!expanded && (
 
-                    <button className="font-medium text-base underline underline-offset-1" type="button" onClick={handleToggleExpand}>Read more</button>)}
+                    <button className="font-medium text-base hover:scale-110 underline underline-offset-1" type="button" onClick={handleToggleExpand}>Read more</button>)}
                 {expanded && (
                     <div className="card-content">
                         <Reviews user={props} />

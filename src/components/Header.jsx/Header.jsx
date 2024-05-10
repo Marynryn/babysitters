@@ -37,20 +37,20 @@ export const Header = () => {
                 <p className=' text-lg font-medium xl:text-2xl flex items-start '>Nanny.Services</p>
 
                 <div className='mr-0 ml-auto lg:hidden w-6 h-6'>
-                    <button type='button' onClick={() => toggleModal()}>
+                    <button type='button' className='hover:scale-110' onClick={() => toggleModal()}>
                         <svg className=" stroke-white" width={24} height={24}>
                             <use href={`${sprite}#icon-menu-hamburger`} />
 
                         </svg></button>
                 </div>
-                {/* <div className='hidden lg:flex lg:flex-wrap items-center lg:justify-between gap-4'> */}
+
                 <div className='hidden lg:block '><AppBar /></div>
                 <div className='hidden lg:block'>
                     {isLog ? <UserMenu /> : <AuthNav />}
                 </div>
             </div>
 
-            {/* </div> */}
+
             <MobileMenu isOpen={modalOpen} onClose={setModalOpen} isLog={isLog} />
         </>
     )

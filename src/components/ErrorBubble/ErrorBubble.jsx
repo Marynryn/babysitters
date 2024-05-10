@@ -12,4 +12,3 @@ const ErrorBubble = ({ message }) => {
     );
 };
 export default ErrorBubble;
-// the below code fragment can be found in:

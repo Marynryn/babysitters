@@ -18,7 +18,7 @@ export const AuthNav = () => {
             <ul className='lg:flex  lg:items-center justify-center lg:justify-between '>
                 <li key='login' className=' mb-4 lg:mb-0 lg:mr-4'>
 
-                    <button className="border  border-stone-200 rounded-full " type='button' onClick={() => toggleModal('login')}>
+                    <button className="border  border-stone-200 rounded-full  hover:bg-white hover:text-teal-900" type='button' onClick={() => toggleModal('login')}>
                         <span className='bg-transparent flex px-6 py-2 text-base lg:px-10'>Log In</span>
                     </button>
                 </li >

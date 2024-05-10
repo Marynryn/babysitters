@@ -31,22 +31,6 @@ const mySlice = createSlice({
       state.items = action.payload;
     },
   },
-
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(fetchAdverts.pending, (state, action) => {
-  //       state.adverts.isLoading = true;
-  //     })
-  //     .addCase(fetchAdverts.fulfilled, (state, action) => {
-  //       state.adverts.isLoading = false;
-  //       state.error = null;
-  //       state.adverts.items = action.payload;
-  //     })
-  //     .addCase(fetchAdverts.rejected, (state, action) => {
-  //       state.adverts.isLoading = false;
-  //       state.adverts.error = action.payload;
-  //     });
-  // },
 });
 
 export const cardsReducer = mySlice.reducer;

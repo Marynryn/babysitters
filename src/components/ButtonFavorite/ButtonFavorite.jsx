@@ -35,7 +35,7 @@ const ButtonFavorite = ({ props }) => {
     };
 
     return (
-        <button className="w-6 h-6 m-0 bg-white" onClick={toggleFavorite}>
+        <button className="w-6 h-6 m-0 bg-white hover:scale-110" onClick={toggleFavorite}>
             <svg className={isFavorite ? " fill-teal-900 stroke-teal-900" : "fill-white stroke-black stroke-width-1"} width={26} height={26}>
                 <use href={`${sprite}#icon-heart`} />
             </svg>

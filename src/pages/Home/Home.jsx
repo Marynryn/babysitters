@@ -12,7 +12,7 @@ export default function Home() {
             <div className=" bg-teal-900 bg bg-cover  bg-center text-white  rounded-3xl relative" style={{
                 margin: "calc(32 / 1440 * 100%)",
                 width: "calc(100% - ((32 / 1440 * 100%) * 2))",
-                // height: "calc(100% - (32 / 1440 * 100%))",
+
                 padding: "20px calc(96 / 1376 * 100%) 50px calc(96 / 1376 * 100%)",
             }} >
                 <Header />
@@ -22,12 +22,13 @@ export default function Home() {
                 <div className='mb-8' style={{ height: "60px", width: "231px" }}>
                     <NavLink to="/nannies" >
 
-                        <Button type={"button "}><span className="flex items-center   text-xl" style={{ padding: "18px 50px", height: "60px", width: "230px" }} >Get started
-                            <svg className="ml-4 fill-white " width={16} height={16}>
-                                <use href={`${sprite}#icon-arrow-up-right2`} />
+                        <button className=
+                            ' bg-teal-900 button rounded-full ' style={{ border: "solid 1px", borderColor: "rgba(251, 251, 251, 0.40)" }} type={"button "}><span className="flex items-center   text-xl" style={{ padding: "18px 50px", height: "60px", width: "230px" }} >Get started
+                                <svg className="ml-4 svg fill-white hover:rotate-45" width={16} height={16}>
+                                    <use href={`${sprite}#icon-arrow-up-right2`} />
 
-                            </svg></span>
-                        </Button>
+                                </svg></span>
+                        </button>
 
                     </NavLink></div>
                 <div className=" p-4 bg-white rounded-2xl ml-auto flex items-center lg:p-8 2xl:-mr-11" style={{ height: "118", maxWidth: "284px", }}>
