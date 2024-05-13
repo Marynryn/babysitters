@@ -1,10 +1,6 @@
-
-
 import CardsList from "components/CardsList/CardsList";
 import Filters from "components/Filters/Filters";
 import Header from "components/Header.jsx/Header";
-
-
 import { useSelector } from 'react-redux';
 import { selectVisibleFavorites } from "store/selectors";
 

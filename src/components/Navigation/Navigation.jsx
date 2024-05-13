@@ -1,6 +1,4 @@
 import { NavLink, useLocation } from 'react-router-dom';
-
-
 import { IsLoggedIn } from 'helpers/isLoggedIn';
 import { useEffect, useState } from 'react';
 

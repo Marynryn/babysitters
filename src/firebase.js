@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getDatabase, ref, get } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD489JVZTN88t0iLOihy1HLmkaJ_Ps3FLY",
-  authDomain: "babysitters-6fbe8.firebaseapp.com",
-  projectId: "babysitters-6fbe8",
-  storageBucket: "babysitters-6fbe8.appspot.com",
-  messagingSenderId: "216490295250",
-  appId: "1:216490295250:web:ae40fbee9335fa0812920b",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 export const fetchData = async () => {

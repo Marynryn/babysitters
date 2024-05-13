@@ -1,5 +1,4 @@
 import BookingForm from "components/BookingForm/BookingForm";
-
 import Modal from "components/Modal/Modal";
 import ReviewItem from "components/ReviewItem/ReviewItem";
 import { useState } from "react";

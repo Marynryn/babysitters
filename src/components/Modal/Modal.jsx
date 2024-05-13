@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
 import sprite from "svg/symbol-defs.svg";
-
 import ReactDOM from 'react-dom';
 
 

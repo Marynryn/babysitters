@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-
 import CardItem from "components/CardItem/CardItem";
-
 
 const CardsList = ({ props }) => {
 

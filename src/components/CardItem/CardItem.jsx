@@ -1,10 +1,8 @@
 import sprite from "svg/symbol-defs.svg";
-
 import Location from 'components/Location/Location';
 import Price from 'components/Price/Price';
 import Rating from 'components/Rating/Rating';
 import Reviews from 'components/Reviews/Reviews';
-
 import React, { useState } from 'react'
 import Line from "components/Line/Line";
 import AboutNanny from "components/AboutNanny/AboutNanny";

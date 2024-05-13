@@ -1,8 +1,6 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
-
 import { Layout } from './Layout';
 import { lazy } from 'react';
-
 import PrivateRoute from './PrivateRoute';
 
 
@@ -18,9 +16,6 @@ export const App = () => {
         <Route index element={<Home />} />
         <Route path="/nannies" element={<Nannies />} />
         <Route path="/favorites" element={<PrivateRoute redirectTo="/" component={Favorites} />} />
-
-
-
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>

@@ -1,7 +1,5 @@
 import AppBar from 'components/AppBar/AppBar'
-
 import React, { useEffect, useState } from 'react'
-
 import { IsLoggedIn } from '../../helpers/isLoggedIn';
 import sprite from "svg/symbol-defs.svg";
 import { auth } from 'firebase.js';
