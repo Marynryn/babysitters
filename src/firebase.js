@@ -1,8 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
 import { getDatabase, ref, get } from "firebase/database";
 
+// Ваши переменные окружения
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -12,15 +12,17 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getDatabase(app);
+
 export const fetchData = async () => {
-  const db = getDatabase();
-  const dataRef = ref(db);
+  const dataRef = ref(db); // Если нужно получить корневой узел
 
   try {
     const snapshot = await get(dataRef);
     if (snapshot.exists()) {
       const data = snapshot.val();
-
       return data;
     } else {
       console.log("No data available");
@@ -31,6 +33,3 @@ export const fetchData = async () => {
     return null;
   }
 };
-
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);

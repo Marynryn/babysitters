@@ -17,7 +17,7 @@
     "config-webpack": "^1.0.5",
     "dotenv": "^16.4.5",
     "dotenv-webpack": "^8.1.0",
-    "firebase": "^10.11.1",
+    "firebase": "^10.12.5",
     "formik": "^2.4.6",
     "http-proxy-agent": "^7.0.2",
     "https-browserify": "^1.0.0",
